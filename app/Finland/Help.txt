@@ -1,0 +1,12 @@
+common practice
+
+bundletool build-apks --bundle=/MyApp/my_app.aab --output=/MyApp/my_app.apks \
+    --mode=universal \
+    --ks=/MyApp/keystore.jks \
+    --ks-pass=file:/MyApp/keystore.pwd \
+    --ks-key-alias=MyKeyAlias \
+    --key-pass=file:/MyApp/key.pwd
+
+
+help website for dev apk:
+https://docs.expo.dev/build-reference/apk/
