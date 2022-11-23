@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import {Button, StyleSheet, Text, View} from 'react-native';
-import {Mainpage} from './template/mainpage';
 
 
 
@@ -10,7 +9,6 @@ export default function App() {
     <View style={styles.container}>
       <Text>Sailesh</Text>
       <Button title={"This does nothing"} />
-      <Mainpage/>
       <StatusBar style="auto" />
 
     </View>
