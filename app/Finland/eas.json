@@ -7,17 +7,17 @@
       "developmentClient": true,
       "distribution": "internal"
     },
-    "preview": {
+    "productionapk": {
       "android": {
         "buildType": "apk"
       }
     },
-    "preview2": {
+    "productionapk2": {
       "android": {
         "gradleCommand": ":app:assembleRelease"
       }
     },
-    "preview3": {
+    "productionapk3": {
       "developmentClient": true
     },
     "production": {}

@@ -44,4 +44,7 @@ https://docs.expo.dev/build-reference/apk/
     "production": {}
   }
 }
+
+use command:-
+eas build -p android --profile productionapk
 __________________________________________________
