@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import {Mainpage} from './template/mainpage';
 
-function nothingfunc(){
-  return 0;
-}
+
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Sailesh</Text>
-      <Button title={"This does nothing"} onPress={nothingfunc}/>
+      <Button title={"This does nothing"} />
+      <Mainpage/>
       <StatusBar style="auto" />
 
     </View>
@@ -20,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffff',
     alignItems: 'center',
     justifyContent: 'center',
   },

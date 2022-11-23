@@ -1,5 +1,7 @@
 common practice
 
+
+# this didn't work so gg
 bundletool build-apks --bundle=/MyApp/my_app.aab --output=/MyApp/my_app.apks \
     --mode=universal \
     --ks=/MyApp/keystore.jks \
@@ -10,3 +12,36 @@ bundletool build-apks --bundle=/MyApp/my_app.aab --output=/MyApp/my_app.apks \
 
 help website for dev apk:
 https://docs.expo.dev/build-reference/apk/
+|
+|----|
+|----> content
+|{
+  "cli": {
+    "version": ">= 2.7.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
+  },
+  
+  "submit": {
+    "production": {}
+  }
+}
+__________________________________________________
