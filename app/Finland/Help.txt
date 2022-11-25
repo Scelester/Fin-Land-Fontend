@@ -1,6 +1,11 @@
 common practice
 
 
+#to test the development use command:
+npx expo start
+-----> npx runs node from directory whereas npm runs it through default system directory
+
+
 # this didn't work so gg
 bundletool build-apks --bundle=/MyApp/my_app.aab --output=/MyApp/my_app.apks \
     --mode=universal \
