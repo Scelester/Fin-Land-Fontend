@@ -19,7 +19,7 @@ export default function App() {
         source={{ uri: 'https://scelester.github.io/Fin-Land-Fontend/' }}
         style={{ flex: 1 }}
       />
-      
+      <StatusBar style='auto'/>
     </View>
   );
 }
