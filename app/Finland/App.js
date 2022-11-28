@@ -12,14 +12,15 @@ import { useWindowDimensions } from 'react-native';
 
 export default function App() {
 
-
   return (
     <View style={{ flex: 1 }} >
-      <StatusBar backgroundColor='cyan' />
+      <StatusBar backgroundColor='#2A6472' />
       <WebView
+      useWebView2={true}
         source={{ uri: 'https://scelester.github.io/Fin-Land-Fontend/' }}
         style={styles.container}
         setBuiltInZoomControls={false}
+        setDisplayZoomControls={false}
       />
     </View>
   );
