@@ -3,9 +3,8 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 
 import { WebView } from 'react-native-webview';
-// import { useWindowDimensions } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 // import RenderHtml from 'react-native-render-html';
-
 
 
 
@@ -13,13 +12,15 @@ import { WebView } from 'react-native-webview';
 
 export default function App() {
 
+
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1 }} >
+      <StatusBar backgroundColor='cyan' />
       <WebView
         source={{ uri: 'https://scelester.github.io/Fin-Land-Fontend/' }}
-        style={{ flex: 1 }}
+        style={styles.container}
+        setBuiltInZoomControls={false}
       />
-      <StatusBar style='auto'/>
     </View>
   );
 }
