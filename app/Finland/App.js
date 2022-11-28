@@ -1,32 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import {Button, StyleSheet, Text, View} from 'react-native';
-
-import { useWindowDimensions } from 'react-native';
-import RenderHtml from 'react-native-render-html';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 
-const homesource =	{
-	html:`
-	<p>This is a test</p>
-	`
-	}
+import { WebView } from 'react-native-webview';
+// import { useWindowDimensions } from 'react-native';
+// import RenderHtml from 'react-native-render-html';
+
+
+
 
 
 
 export default function App() {
 
-	const {width} = useWindowDimensions();	
   return (
-    <View style={styles.container}>
-      <Text>Sailesh</Text>
-      <Button title={"This does nothing"} />
-
-	  <RenderHtml contentWidth={width}
-					source={homesource}
-					/>
-
-	  <StatusBar style="auto" />
-
+    <View style={{ flex: 1 }}>
+      <WebView
+        source={{ uri: 'google.com' }}
+        style={{ flex: 1 }}
+      />
     </View>
   );
 }
@@ -34,7 +26,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffff',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
