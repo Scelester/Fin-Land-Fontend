@@ -16,9 +16,10 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>
       <WebView
-        source={{ uri: 'google.com' }}
+        source={{ uri: 'https://scelester.github.io/Fin-Land-Fontend/' }}
         style={{ flex: 1 }}
       />
+      
     </View>
   );
 }
