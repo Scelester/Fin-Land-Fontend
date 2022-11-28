@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View,BackHandler } from 'react-native';
 
 
+import { useEffect } from 'react';
 import { WebView } from 'react-native-webview';
-import { useWindowDimensions } from 'react-native';
 // import RenderHtml from 'react-native-render-html';
 
 
@@ -12,7 +12,14 @@ import { useWindowDimensions } from 'react-native';
 
 export default function App() {
 
+  useEffect(()=>{
+    BackHandler.addEventListener("hardwareBackPress",()=>{return false});
+
+    ()=>{BackHandler.removeEventListener("hardwareBackPress",true)};
+  });
+
   return (
+    <>
     <View style={{ flex: 1 }} >
       <StatusBar backgroundColor='#2A6472' />
       <WebView
@@ -20,9 +27,11 @@ export default function App() {
         source={{ uri: 'https://scelester.github.io/Fin-Land-Fontend/' }}
         style={styles.container}
         setBuiltInZoomControls={false}
-        setDisplayZoomControls={false}
+        overScrollMode='never'
       />
+      <Stack.Screen name="Home" component={the} />
     </View>
+    </>
   );
 }
 
