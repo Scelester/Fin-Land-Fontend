@@ -53,3 +53,6 @@ https://docs.expo.dev/build-reference/apk/
 use command:-
 eas build -p android --profile productionapk
 __________________________________________________
+
+// live database
+https://supabase.com/blog/supabase-realtime-with-multiplayer-features
