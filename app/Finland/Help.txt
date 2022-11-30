@@ -56,3 +56,7 @@ __________________________________________________
 
 // live database
 https://supabase.com/blog/supabase-realtime-with-multiplayer-features
+
+
+// actually god tier
+https://heartbeat.comet.ml/how-to-handle-navigation-with-webviews-in-a-react-native-app-1ed51ab3342f
