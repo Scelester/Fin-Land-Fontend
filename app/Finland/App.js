@@ -1,11 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, BackHandler } from 'react-native';
-
+import {StyleSheet, View, BackHandler,ToastAndroid} from 'react-native';
 import React from 'react';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { useFocusEffect } from '@react-navigation/native';
 import { WebView } from 'react-native-webview';
 
 
@@ -25,12 +21,35 @@ export default function App() {
   const [currentUrl, setCurrentUrl] = React.useState('https://scelester.github.io/Fin-Land-Fontend/')
   const webviewRef = React.useRef(null)
 
-  backButtonHandler = () => {
+  const backButtonHandler = () => {
     if (webviewRef.current) webviewRef.current.goBack()
   }
+  const forwardButtonHandler = () => {
+    if (webviewRef.current) webviewRef.current.goForward();
+  }
+  // for exit in double back press and back button navigation
+  const [exitApp, setExitApp] = React.useState(0);
+  const backAction = () => {
+    setTimeout(() => {
+      setExitApp(0);
+    }, 500); // 2 seconds to tap second-time
+
+    if (exitApp === 0) {
+      setExitApp(exitApp + 1);
+      backButtonHandler();
+      ToastAndroid.show("Press back button again to exit",500);
+    } else if (exitApp === 1) {
+      BackHandler.exitApp();
+    }
+    return true;
+  };
 
   React.useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => { backButtonHandler();return true })
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+    return () => backHandler.remove();
   });
 
   return (
@@ -39,7 +58,7 @@ export default function App() {
         <StatusBar backgroundColor='#2A6472' />
         <WebView
           ref={webviewRef}
-          source={{ uri: currentUrl }}
+          source={{ uri: "https://scelester.github.io/Fin-Land-Fontend/" }}
           style={styles.container}
           setBuiltInZoomControls={false}
           overScrollMode='never'
