@@ -6,7 +6,7 @@ const Verify_user = () => {
     const supabsekey = process.env.SUPABASEKEY
 
     console.log(supabaseurl)
-
+    console.log("test")
 };
 
 
