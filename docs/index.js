@@ -9,5 +9,6 @@ const Verify_user = () => {
 
 let login_button = document.getElementById("loginbutton");
 
-login_button.addEventListener("click",alert("ok"));
-
+login_button.addEventListener("click", () => {
+    alert("me")
+})
