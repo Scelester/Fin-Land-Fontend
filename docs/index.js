@@ -3,6 +3,8 @@ const supabsekey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
 const supabase = createClient(supabaseurl, supabsekey)
 
 
+console.log("test")
+
 const Verify_user = async () => {
     
     let { user, error } = await supabase
