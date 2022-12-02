@@ -4,7 +4,7 @@ const supabase = createClient(supabaseurl, supabsekey)
 
 
 const Verify_user = async () => {
-    let { user: User_Authentication, error } = await supabase
+    let { user, error } = await supabase
     .from('User_Authentication')
 
     console.log("User:",user,"error:",error)
