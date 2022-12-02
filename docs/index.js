@@ -13,5 +13,5 @@ const Verify_user = () => {
 
 var login_button = document.getElementById("loginbutton");
 
-login_button.addEventListener("click",Verify_user);
+login_button.addEventListener("click",Verify_user());
 
