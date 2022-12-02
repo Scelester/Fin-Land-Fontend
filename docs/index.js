@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 
 const Verify_user = () => {
     const supabaseurl = process.env.SUPABASEURL
