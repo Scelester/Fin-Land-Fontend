@@ -7,6 +7,7 @@ const Verify_user = () => {
 
     console.log(supabaseurl)
     console.log("test")
+    alert("ok")
 };
 
 
