@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    color: #023047;
+    background-color: white;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    background-size: cover;
+}
+
+/* 
+##########################
+    Top Container Part
+##########################
+*/
+
+
+.top_container {
+    background-image: linear-gradient(to top right, #8ecae6, #219ebc);
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_container img {
+    margin: 5rem 0rem 2em 0rem;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+.top_container h3{
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.top_container p{
+    font-size: 1.5rem;
+}
+
+.heading {
+    font-size: 30;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.heading_box {
+    background-color: #023047;
+    color: white;
+    border-radius: 1rem;
+    padding: 0rem 1rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    margin: 2rem;
+    height: 20rem;
+    padding: 3rem;
+    border-radius: 3rem;
+}
+
+.time h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.time button {
+    background-color: #023047;
+    color: white;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.time .inputs {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.time .inputs input, select {
+    -webkit-appearance: none;
+    height: 5rem;
+    width: 8rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-color: rgb(94, 94, 94);
+}
+
+.time .inputs select option {
+    font-size: 1rem;
+}
+
+.cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel button {
+    background-color: #023047;
+    color: white;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin: 1rem;
+}
