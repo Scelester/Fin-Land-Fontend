@@ -18,8 +18,15 @@ const logInSubmitted = async () => {
   const username = document.getElementById("username").value
   const password = document.getElementById("password").value
 
-  const { usernamex} = await supabase.from("User_Authentication").select("username")
-  const {passwordx} = await supabase.from("User_Authentication").select("Password")
+  const { data, error } = await supabase.rpc('authenticating',{"xusername":username, "xpassword":password})
 
-  console.log(usernamex);
+  if (data == "true"){
+    window.localStorage.setItem("username",username);
+    window.localStorage.setItem("password",password);
+    window.location.href = "./dashboard.html"
+
+  }else if (data == "false"){
+    alert("wrong username or password");
+  }
+
 }
