@@ -12,29 +12,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
   logInbutton.addEventListener('click', () => {logInSubmitted()})
 
 })
+  
+const logInSubmitted = async () => {
 
-const logInSubmitted = (event) => {
-
-  const email = document.getElementById("username").value
+  const username = document.getElementById("username").value
   const password = document.getElementById("password").value
 
-  supabase.auth
-    .signIn({ email, password })    
-    .then((response) => {
-      response.error ? alert(response.error.message) : setToken(response)
-    })
-    .catch((err) => {
-      alert(err.response.text)
-    })
-    
-}
-async function xxx(){
-const { data: user, error } = await supabase.auth.api.createUser({
+  const { usernamex} = await supabase.from("User_Authentication").select("username")
+  const {passwordx} = await supabase.from("User_Authentication").select("Password")
 
-    email: 'user',
-  
-    password: 'password',
-  
-  })
-
+  console.log(usernamex);
 }
