@@ -1,2 +1,2 @@
 
-add back button in each html file
+create info page
