@@ -5,6 +5,7 @@ var SUPABASE_KEY ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIs
 
 var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 
-document.addEventListener('DOMContentLoaded', function (event) {
-
+document.addEventListener('DOMContentLoaded',async function (event) {
+    document.querySelector('#xuseraname').innerHTML = window.localStorage.getItem('username');
+    document.querySelector('#gmail').innerHTML = "greengang@finland"
 })
