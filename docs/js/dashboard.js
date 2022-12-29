@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', async function (event) {
     const phdata = await supabase.from('PH-data').select("PH-Value");
     last_ph_data = phdata.data.slice(-1)[0]['PH-Value'];
     document.querySelector('#lastph_val').innerHTML = last_ph_data;
+    
     document.querySelector('#ffusername').innerHTML = localStorage.getItem('username');
+
+    const tempdata = await supabase.from('TEMP-data').select('TEMP-Value')
+    last_temp_data = tempdata.data.slice(-1)[0]['TEMP-Value'];
+    document.querySelector('#lasttemp_val').innerHTML = last_temp_data;
 
 })
 
