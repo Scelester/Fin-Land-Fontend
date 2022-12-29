@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 const get_ph_single = async () => {
     let {PH_data,ph_error} = await supabase.from('PH-data').select('PH-Value')
-    console.log(supabase);
+    console.log(PH_data,ph_error)
 } 

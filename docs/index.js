@@ -9,13 +9,13 @@ var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 document.addEventListener('DOMContentLoaded', function (event) {
 
   var logInbutton = document.querySelector('#loginbutton')
-  logInbutton.addEventListener('click', () => {logInSubmitted()})
+  logInbutton.addEventListener('click', () => {logInSubmittedx()})
 
   
 
 })
   
-const logInSubmitted = async () => {
+const logInSubmittedx = async () => {
 
   const username = document.getElementById("username").value
   const password = document.getElementById("password").value
