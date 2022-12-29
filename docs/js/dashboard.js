@@ -5,12 +5,16 @@ var SUPABASE_KEY ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIs
 
 var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    get_ph_single();
+
+document.addEventListener('DOMContentLoaded', async function (event) {
+    const phdata = await supabase.from('PH-data').select("PH-Value");
+    last_ph_data = phdata.data.slice(-1)[0]['PH-Value'];
+    document.querySelector('#lastph_val').innerHTML = last_ph_data;
+    document.querySelector('#ffusername').innerHTML = localStorage.getItem('username');
+
 })
 
 
-const get_ph_single = async () => {
-    let {PH_data,ph_error} = await supabase.from('PH-data').select('PH-Value')
-    console.log(PH_data,ph_error)
-} 
+
+
+

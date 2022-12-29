@@ -17,7 +17,7 @@
                 </div>
                 <div class="subheading">
                     <h3>Welcome Back,</h3><br>
-                    <h2>"User"</h2>
+                    <h2 id="ffusername">"User"</h2>
                 </div>
                 <div class="graph">
                     <span class="material-symbols-outlined">
@@ -28,11 +28,20 @@
 
             <div class="grids">
                 <div class="ph">
-                    <h1>7<br></h1>
+                    <h1 id="lastph_val"><br></h1>
                     <p>pH</p>
                 </div>
-                <a href="feeding.html"><div class="feeding">Feeding</div></a>
+                <a href="./feeding.html"><div class="feeding">Feeding</div></a>
             </div>
+
+            <div class="grids">
+                <div class="ph">
+                    <h1 id="lasttemp_val"><br></h1>
+                    <p>&de\ <Canvas></Canvas></p>
+                </div>
+                <a href="./feeding.html"><div class="feeding">RC</div></a>
+            </div>
+            
             
 
             <div class="bottom_container">
@@ -42,21 +51,21 @@
                         </span>
                 </button>
                 </a>
-                <a href="dashboard.html">
+                <a href="./dashboard.html">
                 <button>
                     <span class="material-symbols-outlined">
                         home
                         </span>
                 </button>
                 </a>
-                <button>
+                <button onclick="window.location.reload()">
                     <span class="material-symbols-outlined">
                         refresh
                         </span>
                 </button>          
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script src="./js/dashboard.js"></script>
     </body>
 </html>
