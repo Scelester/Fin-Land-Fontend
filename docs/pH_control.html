@@ -12,7 +12,7 @@
         </div>
 
         <div class="main">
-            <div class="logo">
+            <div class="    go">
                 <img src="https://cdn.pixabay.com/photo/2012/04/16/13/55/fish-36085_960_720.png">
             </div>
             <h2>Control The pH of Water</h2><br>
@@ -31,12 +31,15 @@
                         <input type="radio" name="Svalue" id="oxygen">
                         <label for="oxygen">Bubbler</label>    
                     </div>
-                    <input type="number" name="timmer" id="timer">
+                    <div>
+                        <label>Timer</label>
+                        <input type="number" name="timmer" id="timer">
+                    </div>
                 </div>
             </p>
             <div class="button">
                 <a href="settings.html"><button>Cancel</button></a>
-                <a href="settings.html"><button>Send</button></a>
+                <a><button onclick="updater()">Send</button></a>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

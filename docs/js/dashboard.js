@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function (event) {
     
     document.querySelector('#ffusername').innerHTML = localStorage.getItem('username');
 
-    const tempdata = await supabase.from('TEMP-data').select('TEMP-Value')
+    const tempdata = await supabase.from('TEMP-data').select('TEMP-Value');
     last_temp_data = tempdata.data.slice(-1)[0]['TEMP-Value'];
     document.querySelector('#lasttemp_val').innerHTML = last_temp_data;
 
